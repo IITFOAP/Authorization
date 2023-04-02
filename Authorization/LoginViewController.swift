@@ -44,7 +44,7 @@ final class LoginViewController: UIViewController {
         if username == "Roman" && password == "Password" {
             performSegue(withIdentifier: "goToTheNextScreen", sender: self)
         } else {
-            displaysWarningForData("Invalid login or password", "Please, enter correct login and password")
+            displaysAlert("Invalid login or password", "Please, enter correct login and password")
         }
     }
     
@@ -59,12 +59,6 @@ final class LoginViewController: UIViewController {
     // MARK: Private Methods
     private func displaysAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
-    }
-    
-    private func displaysWarningForData(_ title: String, _ massage: String) {
-        let alert = UIAlertController(title: title, message: massage, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default) {_ in
             self.passwordTF.text = "" }
         alert.addAction(okAlert)
@@ -72,5 +66,4 @@ final class LoginViewController: UIViewController {
     }
 }
 
-    //очень долго думал, почему не менялось название фала в левой колонке
 
