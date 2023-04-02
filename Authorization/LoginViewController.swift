@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Authorization
 //
 //  Created by Рома Баранов on 31.03.2023.
@@ -71,4 +71,6 @@ final class LoginViewController: UIViewController {
         present(alert, animated: true)
     }
 }
+
+    //очень долго думал, почему не менялось название фала в левой колонке
 

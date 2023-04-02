@@ -1,5 +1,5 @@
 //
-//  EntranceViewController.swift
+//  WelcomeViewController.swift
 //  Authorization
 //
 //  Created by Рома Баранов on 31.03.2023.
