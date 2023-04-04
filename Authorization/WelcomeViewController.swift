@@ -13,24 +13,22 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var helloLabel: UILabel!
     
     // MARK: Properties
-    var helloLableText: String?
+    var helloText = ""
     
     // MARK: Viev life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         makesBackgroundGradient()
-        helloLabel.text = "Welcome, \(helloLableText ?? "")!"
+        helloLabel.text = "Welcome, \(helloText)!"
     }
     
     // MARK: Private Methods
     private func makesBackgroundGradient() {
         let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor]
+        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor]
         gradientLayer.locations = [0.0, 0.5, 1.0]
-        
         gradientLayer.frame = view.bounds
-        
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+

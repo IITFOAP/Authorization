@@ -40,16 +40,16 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot User Name?"/>
                                         <connections>
-                                            <action selector="printsTheUsername:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNv-MA-Ihc"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOv-w1-i6c"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v22-dV-rSz">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v22-dV-rSz">
                                         <rect key="frame" x="151" y="0.0" width="109" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
-                                            <action selector="displaysTheUsersPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1X-Qg-e1p"/>
+                                            <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfe-vT-be9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,7 +61,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="goesToAnotherScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="26R-KX-SKP"/>
-                                    <segue destination="Wr5-HZ-Oc9" kind="presentation" identifier="goToTheNextScreen" modalPresentationStyle="fullScreen" id="zAV-m8-zsb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,11 +83,12 @@
                         <outlet property="loginButton" destination="fni-J9-bLL" id="cut-dQ-kKp"/>
                         <outlet property="passwordTF" destination="lDk-ji-vFd" id="Pfl-Ls-Fb8"/>
                         <outlet property="userNameTF" destination="OZx-4C-EXp" id="klL-wJ-E0f"/>
+                        <segue destination="Wr5-HZ-Oc9" kind="presentation" identifier="goToTheNextScreen" modalPresentationStyle="fullScreen" id="N5M-CM-JF4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999.375" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="1013" y="-6"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tog-tu-3P1">
@@ -104,8 +104,8 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                    <color key="titleShadowColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="zlT-AX-EuK" kind="unwind" unwindAction="unwindFor:" id="1Lg-ag-JHa"/>
@@ -117,8 +117,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-mN-Wk5">
                                 <rect key="frame" x="139" y="100" width="42" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>

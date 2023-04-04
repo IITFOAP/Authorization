@@ -15,6 +15,10 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
+    // MARK: Private properties
+    private let username = "Roman"
+    private let password = "Password"
+    
     // MARK: Viev life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +26,13 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let helloUser = segue.destination as? WelcomeViewController else { return }
-        helloUser.helloLableText = userNameTF.text
+        helloUser.helloText = username
     }
     
     // MARK: IB Action
@@ -38,29 +43,26 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func goesToAnotherScreen(_ sender: UIButton) {
-        let username = userNameTF.text ?? ""
-        let password = passwordTF.text ?? ""
-        
-        if username == "Roman" && password == "Password" {
-            performSegue(withIdentifier: "goToTheNextScreen", sender: self)
+        if userNameTF.text == username && passwordTF.text == password {
+            performSegue(withIdentifier: "goToTheNextScreen", sender: nil)
         } else {
-            displaysAlert("Invalid login or password", "Please, enter correct login and password")
+            displaysAlert("Invalid login or password", "Please, enter correct login and password", passwordTF)
         }
     }
     
-    @IBAction func printsTheUsername(_ sender: UIButton) {
-        displaysAlert("Oops", "Your name is Roman")
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? displaysAlert("Oops", "Your name is \(username)")
+        : displaysAlert("Oops", "Your password is \(password)")
     }
     
-    @IBAction func displaysTheUsersPassword(_ sender: UIButton) {
-        displaysAlert("Oops", "Your password is Password")
-    }
     
     // MARK: Private Methods
-    private func displaysAlert(_ title: String, _ message: String) {
+    private func displaysAlert(_ title: String, _ message: String, _ textFild: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default) {_ in
-            self.passwordTF.text = "" }
+            textFild?.text = ""
+        }
         alert.addAction(okAlert)
         present(alert, animated: true)
     }
