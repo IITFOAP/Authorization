@@ -8,8 +8,11 @@
 import UIKit
 
 class BiographyViewController: UIViewController {
-
+    @IBOutlet var biographyLabel: UILabel!
+    
+    var biography = "vhjhjhg"
     override func viewDidLoad() {
         super.viewDidLoad()
+        biographyLabel.text = biography
     }
 }

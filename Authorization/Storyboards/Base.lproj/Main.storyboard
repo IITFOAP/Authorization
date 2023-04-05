@@ -221,30 +221,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Резюме " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vm-6X-7TN">
-                                <rect key="frame" x="16" y="112.5" width="68" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Биография" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vm-6X-7TN">
+                                <rect key="frame" x="16" y="112.5" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6018" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-Eo-QaH">
-                                <rect key="frame" x="-604" y="92" width="720" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A0u-gw-dUP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A0u-gw-dUP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6vm-6X-7TN" secondAttribute="trailing" symbolic="YES" id="1ge-Ae-KE4"/>
-                            <constraint firstItem="6vm-6X-7TN" firstAttribute="leading" secondItem="A0u-gw-dUP" secondAttribute="leading" constant="16" id="XYW-Gz-VvU"/>
-                            <constraint firstItem="6vm-6X-7TN" firstAttribute="top" secondItem="A0u-gw-dUP" secondAttribute="top" constant="20" id="Xji-fg-AIF"/>
+                            <constraint firstItem="A0u-gw-dUP" firstAttribute="trailing" secondItem="6vm-6X-7TN" secondAttribute="trailing" constant="16" id="3Id-FQ-1rY"/>
+                            <constraint firstItem="6vm-6X-7TN" firstAttribute="leading" secondItem="A0u-gw-dUP" secondAttribute="leading" constant="16" id="cgF-nU-zaz"/>
+                            <constraint firstItem="6vm-6X-7TN" firstAttribute="top" secondItem="A0u-gw-dUP" secondAttribute="top" constant="20" id="oQY-nL-alC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Баранов Роман" id="oDC-eT-fIt"/>
+                    <connections>
+                        <outlet property="biographyLabel" destination="6vm-6X-7TN" id="gkV-6W-0FQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHP-KG-y8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4194" y="798"/>
+            <point key="canvasLocation" x="4238" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FLH-mV-hmX">
@@ -290,7 +289,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="GTO-4C-aiI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7i6-6S-J4x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
