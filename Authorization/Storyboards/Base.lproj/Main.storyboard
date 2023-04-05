@@ -148,19 +148,16 @@
             </objects>
             <point key="canvasLocation" x="1697" y="798"/>
         </scene>
-        <!--Имя поьзователя -->
+        <!--Баранов Роман-->
         <scene sceneID="2wS-92-X6q">
             <objects>
-                <viewController id="1eK-5T-Cgx" sceneMemberID="viewController">
+                <viewController id="1eK-5T-Cgx" customClass="UserViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CqZ-3a-bV0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-Eo-QaH">
-                                <rect key="frame" x="80" y="92.5" width="160" height="127.5"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d2v-f6-mgj">
-                                <rect key="frame" x="16" y="284.5" width="89.5" height="134.5"/>
+                                <rect key="frame" x="16" y="245.5" width="288" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zX-bL-6hP">
                                         <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
@@ -174,54 +171,52 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Компания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-ks-9Rl">
-                                        <rect key="frame" x="0.0" y="57" width="79.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отдел" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HI-bb-6kF">
-                                        <rect key="frame" x="0.0" y="85.5" width="49.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-6U-cxA">
-                                        <rect key="frame" x="0.0" y="114" width="89.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Увлечения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-ks-9Rl">
+                                        <rect key="frame" x="0.0" y="57" width="84.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6018" translatesAutoresizingMaskIntoConstraints="NO" id="heK-2q-LMx">
+                                <rect key="frame" x="85" y="93" width="150" height="149"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sLd-Lp-4qW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XtG-Eo-QaH" firstAttribute="top" secondItem="sLd-Lp-4qW" secondAttribute="top" id="BYO-fs-hgA"/>
-                            <constraint firstItem="sLd-Lp-4qW" firstAttribute="trailing" secondItem="XtG-Eo-QaH" secondAttribute="trailing" constant="80" id="PrP-8i-mWc"/>
-                            <constraint firstItem="XtG-Eo-QaH" firstAttribute="leading" secondItem="sLd-Lp-4qW" secondAttribute="leading" constant="80" id="TXS-Pr-D09"/>
-                            <constraint firstItem="sLd-Lp-4qW" firstAttribute="bottom" secondItem="d2v-f6-mgj" secondAttribute="bottom" constant="100" id="YNV-Qt-Yif"/>
-                            <constraint firstItem="sLd-Lp-4qW" firstAttribute="bottom" secondItem="XtG-Eo-QaH" secondAttribute="bottom" constant="299" id="zF3-au-sQ1"/>
-                            <constraint firstItem="d2v-f6-mgj" firstAttribute="leading" secondItem="sLd-Lp-4qW" secondAttribute="leading" constant="16" id="zWY-C2-Gxe"/>
+                            <constraint firstItem="sLd-Lp-4qW" firstAttribute="trailing" secondItem="d2v-f6-mgj" secondAttribute="trailing" constant="16" id="4fo-Q0-Q6N"/>
+                            <constraint firstItem="d2v-f6-mgj" firstAttribute="top" secondItem="heK-2q-LMx" secondAttribute="bottom" constant="3.5" id="Aek-wr-oMh"/>
+                            <constraint firstItem="d2v-f6-mgj" firstAttribute="leading" secondItem="sLd-Lp-4qW" secondAttribute="leading" constant="16" id="KhY-kf-T7g"/>
+                            <constraint firstItem="heK-2q-LMx" firstAttribute="leading" secondItem="sLd-Lp-4qW" secondAttribute="leading" constant="85" id="MpJ-iR-F88"/>
+                            <constraint firstItem="d2v-f6-mgj" firstAttribute="centerY" secondItem="CqZ-3a-bV0" secondAttribute="centerY" id="f85-Kz-OwD"/>
+                            <constraint firstItem="heK-2q-LMx" firstAttribute="top" secondItem="CqZ-3a-bV0" secondAttribute="topMargin" constant="0.5" id="gzf-qa-A2V"/>
+                            <constraint firstItem="sLd-Lp-4qW" firstAttribute="trailing" secondItem="heK-2q-LMx" secondAttribute="trailing" constant="85" id="izg-Eo-16d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Имя поьзователя " id="Rkn-lO-lY7">
+                    <navigationItem key="navigationItem" title="Баранов Роман" id="Rkn-lO-lY7">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="NOv-gQ-aam">
                             <connections>
                                 <segue destination="WBc-iP-qUb" kind="show" id="1rx-yM-Bd3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="hobbiesLabel" destination="PG7-ks-9Rl" id="4oD-pV-e2A"/>
+                        <outlet property="surnameLabel" destination="nhn-2D-IFx" id="deZ-H6-hgh"/>
+                        <outlet property="userPhoto" destination="heK-2q-LMx" id="ZXH-fJ-pZu"/>
+                        <outlet property="usernameLabel" destination="1zX-bL-6hP" id="JCa-Ig-vVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPu-vN-Iml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3446.25" y="797.53521126760563"/>
         </scene>
-        <!--ИМЯ Bio-->
+        <!--Баранов Роман-->
         <scene sceneID="9bq-xa-fch">
             <objects>
-                <viewController id="WBc-iP-qUb" sceneMemberID="viewController">
+                <viewController id="WBc-iP-qUb" customClass="BiographyViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pc1-sJ-c4F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,15 +227,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6018" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-Eo-QaH">
+                                <rect key="frame" x="-604" y="92" width="720" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A0u-gw-dUP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="A0u-gw-dUP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6vm-6X-7TN" secondAttribute="trailing" symbolic="YES" id="1ge-Ae-KE4"/>
                             <constraint firstItem="6vm-6X-7TN" firstAttribute="leading" secondItem="A0u-gw-dUP" secondAttribute="leading" constant="16" id="XYW-Gz-VvU"/>
                             <constraint firstItem="6vm-6X-7TN" firstAttribute="top" secondItem="A0u-gw-dUP" secondAttribute="top" constant="20" id="Xji-fg-AIF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ИМЯ Bio" id="oDC-eT-fIt"/>
+                    <navigationItem key="navigationItem" title="Баранов Роман" id="oDC-eT-fIt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHP-KG-y8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,7 +249,6 @@
         <!--Navigation Controller-->
         <scene sceneID="FLH-mV-hmX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yj8-df-g0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="etv-HI-V59" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mtX-WZ-8dz">
@@ -261,6 +260,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Atj-Ch-xUu"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yj8-df-g0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="-6"/>
         </scene>
@@ -305,6 +305,7 @@
     </scenes>
     <resources>
         <image name="Hello World" width="144" height="144"/>
+        <image name="IMG_6018" width="715" height="717"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

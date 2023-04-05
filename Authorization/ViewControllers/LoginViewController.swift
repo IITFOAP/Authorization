@@ -16,13 +16,14 @@ final class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     
     // MARK: Private properties
-    private let username = "Roman"
-    private let password = "Password"
+    private var biography = Biography.getBiography()
     
     // MARK: Viev life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 15
+        userNameTF.text = biography.login.result
+        passwordTF.text = biography.password.result
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,19 +32,30 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let helloUser = segue.destination as? WelcomeViewController else { return }
-        helloUser.helloText = username
+        guard let tabBC = segue.destination as? UITabBarController else { return }
+        guard let viewScreens = tabBC.viewControllers else { return }
+        
+        viewScreens.forEach { viewController in
+            if let welcomVC  = viewController as? WelcomeViewController {
+                welcomVC.helloText = biography.name.definition
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+                userVC.username = biography.name.definition
+                userVC.surname = biography.surname.definition
+                userVC.hobbies = biography.enthusiasm.definition
+            }
+        }
     }
     
     // MARK: IB Action
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
-        
+
     }
-    
+
     @IBAction func goesToAnotherScreen(_ sender: UIButton) {
-        if userNameTF.text == username && passwordTF.text == password {
+        if userNameTF.text == biography.login.result && passwordTF.text == biography.password.result {
             performSegue(withIdentifier: "goToTheNextScreen", sender: nil)
         } else {
             displaysAlert("Invalid login or password", "Please, enter correct login and password", passwordTF)
@@ -52,8 +64,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? displaysAlert("Oops", "Your name is \(username)")
-        : displaysAlert("Oops", "Your password is \(password)")
+        ? displaysAlert("Oops", "Your name is \(biography.login.result)")
+        : displaysAlert("Oops", "Your password is \(biography.password.result)")
     }
     
     
