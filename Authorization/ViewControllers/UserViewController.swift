@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+final class UserViewController: UIViewController {
     
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!

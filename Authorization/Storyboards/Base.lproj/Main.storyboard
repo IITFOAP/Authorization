@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="3446.25" y="797.53521126760563"/>
         </scene>
-        <!--Баранов Роман-->
+        <!--Биография-->
         <scene sceneID="9bq-xa-fch">
             <objects>
                 <viewController id="WBc-iP-qUb" customClass="BiographyViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
@@ -251,7 +251,7 @@
                             <constraint firstItem="6vm-6X-7TN" firstAttribute="top" secondItem="A0u-gw-dUP" secondAttribute="top" constant="20" id="oQY-nL-alC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Баранов Роман" id="oDC-eT-fIt"/>
+                    <navigationItem key="navigationItem" title="Биография" id="oDC-eT-fIt"/>
                     <connections>
                         <outlet property="biographyLabel" destination="6vm-6X-7TN" id="gkV-6W-0FQ"/>
                     </connections>
@@ -304,7 +304,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="GTO-4C-aiI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7i6-6S-J4x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
