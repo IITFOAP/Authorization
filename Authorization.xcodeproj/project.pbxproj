@@ -16,6 +16,7 @@
 		2CDA53CF29DDF34200A10C5F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA53CE29DDF34200A10C5F /* UserViewController.swift */; };
 		2CDA53D129DDF38E00A10C5F /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA53D029DDF38E00A10C5F /* BiographyViewController.swift */; };
 		2CDA53D229DE07E200A10C5F /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 2C129C8C29D74D48002AB7FC /* Assets.xcassets */; };
+		2CDA53D429DE1ED000A10C5F /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA53D329DE1ED000A10C5F /* TabViewController.swift */; };
 		2CE8AAC229DC98AF006E7173 /* Biography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8AAC129DC98AF006E7173 /* Biography.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		2C8EE97129D75B8B00E3454D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2CDA53CE29DDF34200A10C5F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2CDA53D029DDF38E00A10C5F /* BiographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
+		2CDA53D329DE1ED000A10C5F /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		2CE8AAC129DC98AF006E7173 /* Biography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biography.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				2C8EE97129D75B8B00E3454D /* WelcomeViewController.swift */,
 				2CDA53CE29DDF34200A10C5F /* UserViewController.swift */,
 				2CDA53D029DDF38E00A10C5F /* BiographyViewController.swift */,
+				2CDA53D329DE1ED000A10C5F /* TabViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				2C129C8429D74D47002AB7FC /* AppDelegate.swift in Sources */,
 				2C8EE97229D75B8B00E3454D /* WelcomeViewController.swift in Sources */,
 				2C129C8629D74D47002AB7FC /* SceneDelegate.swift in Sources */,
+				2CDA53D429DE1ED000A10C5F /* TabViewController.swift in Sources */,
 				2CDA53D229DE07E200A10C5F /* Assets.xcassets in Sources */,
 				2CE8AAC229DC98AF006E7173 /* Biography.swift in Sources */,
 			);

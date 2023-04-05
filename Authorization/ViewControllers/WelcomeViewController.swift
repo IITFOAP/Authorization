@@ -9,20 +9,20 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    // MARK: IB Outlets
     @IBOutlet var helloLabel: UILabel!
+    @IBOutlet var usernameLable: UILabel!
     
-    // MARK: Properties
     var helloText = ""
+    var nameText = ""
+    var surnameText = ""
     
-    // MARK: Viev life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         makesBackgroundGradient()
         helloLabel.text = "Welcome, \(helloText)!"
+        usernameLable.text = "Мое имя \(surnameText) \(nameText)"
     }
     
-    // MARK: Private Methods
     private func makesBackgroundGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.blue.cgColor, UIColor.green.cgColor]

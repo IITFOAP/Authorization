@@ -112,35 +112,50 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hello World" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-RY-Qnw">
-                                <rect key="frame" x="135" y="156" width="50" height="50"/>
+                                <rect key="frame" x="135" y="159" width="50" height="50"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-mN-Wk5">
-                                <rect key="frame" x="139" y="100" width="42" height="21"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZFl-n0-cjB">
+                                <rect key="frame" x="139.5" y="100" width="41.5" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-mN-Wk5">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="21.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xZ-fb-lmg">
+                                        <rect key="frame" x="0.0" y="21.5" width="41.5" height="21.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V95-A8-4lC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ntd-RY-Qnw" firstAttribute="height" secondItem="0sJ-nc-tc4" secondAttribute="height" multiplier="0.0880282" id="5Kg-vn-EIz"/>
-                            <constraint firstItem="Ntd-RY-Qnw" firstAttribute="top" secondItem="V0C-mN-Wk5" secondAttribute="bottom" constant="35" id="Agq-er-WaU"/>
                             <constraint firstItem="V95-A8-4lC" firstAttribute="trailing" secondItem="Ntd-RY-Qnw" secondAttribute="trailing" constant="135" id="JaI-gD-7rP"/>
                             <constraint firstItem="Ntd-RY-Qnw" firstAttribute="leading" secondItem="V95-A8-4lC" secondAttribute="leading" constant="135" id="QV7-O1-5PI"/>
+                            <constraint firstItem="ZFl-n0-cjB" firstAttribute="centerX" secondItem="0sJ-nc-tc4" secondAttribute="centerX" id="WHF-1w-bwA"/>
+                            <constraint firstItem="Ntd-RY-Qnw" firstAttribute="top" secondItem="ZFl-n0-cjB" secondAttribute="bottom" constant="16" id="Z4y-T9-nVR"/>
                             <constraint firstItem="V95-A8-4lC" firstAttribute="trailing" secondItem="FfV-db-gcB" secondAttribute="trailing" constant="134" id="dZg-Ab-FLe"/>
-                            <constraint firstItem="V0C-mN-Wk5" firstAttribute="top" secondItem="V95-A8-4lC" secondAttribute="top" constant="100" id="fk5-zX-Z4U"/>
                             <constraint firstItem="V95-A8-4lC" firstAttribute="bottom" secondItem="FfV-db-gcB" secondAttribute="bottom" constant="142" id="hAI-c1-7FS"/>
+                            <constraint firstItem="ZFl-n0-cjB" firstAttribute="top" secondItem="V95-A8-4lC" secondAttribute="top" constant="100" id="qmj-i0-pDb"/>
                             <constraint firstItem="FfV-db-gcB" firstAttribute="leading" secondItem="V95-A8-4lC" secondAttribute="leading" constant="134" id="sjP-iM-gWR"/>
-                            <constraint firstItem="V0C-mN-Wk5" firstAttribute="centerX" secondItem="0sJ-nc-tc4" secondAttribute="centerX" id="tYy-cz-gMO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="Q6x-zr-XTM"/>
                     <connections>
                         <outlet property="helloLabel" destination="V0C-mN-Wk5" id="llB-C5-7DK"/>
+                        <outlet property="usernameLable" destination="4xZ-fb-lmg" id="HAF-Hq-CU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8I-Fx-8f6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -263,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="-6"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="bfL-t2-TKq">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MEJ-jF-1mj" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MEJ-jF-1mj" customClass="TabViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K0D-W4-vk1">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

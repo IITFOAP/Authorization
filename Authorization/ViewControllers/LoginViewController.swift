@@ -9,16 +9,13 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    // MARK: IB Outlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var loginButton: UIButton!
     
-    // MARK: Private properties
     private var person = Biography.getBiography()
     
-    // MARK: Viev life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 15
@@ -37,7 +34,9 @@ final class LoginViewController: UIViewController {
         
         viewScreens.forEach { viewController in
             if let welcomVC  = viewController as? WelcomeViewController {
-                welcomVC.helloText = person.name.definition
+                welcomVC.helloText = person.login.result
+                welcomVC.nameText = person.name.definition
+                welcomVC.surnameText = person.surname.definition
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let userVC = navigationVC.topViewController as? UserViewController else { return }
                 userVC.username = person.name.definition
@@ -48,7 +47,6 @@ final class LoginViewController: UIViewController {
             }
         }
     
-    // MARK: IB Action
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
@@ -69,8 +67,6 @@ final class LoginViewController: UIViewController {
         : displaysAlert("Oops", "Your password is \(person.password.result)")
     }
     
-    
-    // MARK: Private Methods
     private func displaysAlert(_ title: String, _ message: String, _ textFild: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAlert = UIAlertAction(title: "OK", style: .default) {_ in
