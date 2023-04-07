@@ -10,9 +10,11 @@ import UIKit
 final class BiographyViewController: UIViewController {
     @IBOutlet var biographyLabel: UILabel!
     
-    var biography = "vhjhjhg"
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        biographyLabel.text = biography
+        title = user.person.fullName
+        biographyLabel.text = user.person.biography
     }
 }

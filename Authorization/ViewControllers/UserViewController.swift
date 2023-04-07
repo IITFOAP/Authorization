@@ -15,17 +15,15 @@ final class UserViewController: UIViewController {
     
     @IBOutlet var userPhoto: UIImageView!
     
-    var username = ""
-    var surname = ""
-    var hobbies = ""
-    var biographyText = ""
-    
+    var user: User!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        usernameLabel.text = "Имя: \(username)"
-        surnameLabel.text = "Фамилия: \(surname)"
-        hobbiesLabel.text = "Увлечения: \(hobbies)"
+        view.makesBackgroundGradient()
+        title = user.person.fullName
+        usernameLabel.text = "Имя: \(user.person.name)"
+        surnameLabel.text = "Фамилия: \(user.person.surname)"
+        hobbiesLabel.text = "Увлечения: \(user.person.enthusiasm)"
         
     }
     override func viewWillLayoutSubviews() {
@@ -34,6 +32,6 @@ final class UserViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let biographyVC = segue.destination as? BiographyViewController else { return }
-        biographyVC.biography = biographyText
+        biographyVC.user = user
     }
 }

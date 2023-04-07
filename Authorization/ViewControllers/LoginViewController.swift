@@ -14,13 +14,13 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
-    private var person = Biography.getBiography()
+    private var user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 15
-        userNameTF.text = person.login.result
-        passwordTF.text = person.password.result
+        userNameTF.text = user.login
+        passwordTF.text = user.password
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,22 +29,26 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBC = segue.destination as? UITabBarController else { return }
-        guard let viewScreens = tabBC.viewControllers else { return }
+        guard let tabBC = segue.destination as? TabBarController else {
+            return
+        }
+        tabBC.user = user
         
-        viewScreens.forEach { viewController in
-            if let welcomVC  = viewController as? WelcomeViewController {
-                welcomVC.helloText = person.login.result
-                welcomVC.nameText = person.name.definition
-                welcomVC.surnameText = person.surname.definition
-            } else if let navigationVC = viewController as? UINavigationController {
-                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
-                userVC.username = person.name.definition
-                userVC.surname = person.surname.definition
-                userVC.hobbies = person.enthusiasm.definition
-                userVC.biographyText = person.biography.definition
-                }
-            }
+        
+        
+//        viewScreens.forEach { viewController in
+//            if let welcomVC  = viewController as? WelcomeViewController {
+//                welcomVC.helloText = person.login.result
+//                welcomVC.nameText = person.name.definition
+//                welcomVC.surnameText = person.surname.definition
+//            } else if let navigationVC = viewController as? UINavigationController {
+//                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+//                userVC.username = person.name.definition
+//                userVC.surname = person.surname.definition
+//                userVC.hobbies = person.enthusiasm.definition
+//                userVC.biographyText = person.biography.definition
+//                }
+//            }
         }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -54,7 +58,7 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func goesToAnotherScreen(_ sender: UIButton) {
-        if userNameTF.text == person.login.result && passwordTF.text == person.password.result {
+        if userNameTF.text == user.login && passwordTF.text == user.password {
             performSegue(withIdentifier: "goToTheNextScreen", sender: nil)
         } else {
             displaysAlert("Invalid login or password", "Please, enter correct login and password", passwordTF)
@@ -63,8 +67,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? displaysAlert("Oops", "Your name is \(person.login.result)")
-        : displaysAlert("Oops", "Your password is \(person.password.result)")
+        ? displaysAlert("Oops", "Your name is \(user.login)")
+        : displaysAlert("Oops", "Your password is \(user.password)")
     }
     
     private func displaysAlert(_ title: String, _ message: String, _ textFild: UITextField? = nil) {
